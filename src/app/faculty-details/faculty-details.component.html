@@ -1,0 +1,34 @@
+<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+    <app-header-component></app-header-component>
+    <div class="demo-drawer mdl-layout__drawer mdl-color--deep-purple-700 mdl-color-text--white">
+        <header class="demo-drawer-header">
+            <span class="mdl-layout-title title"><img src="assets/Anurag-logo.png" alt="logo"></span>
+        </header>
+        <app-sidebar></app-sidebar>
+    </div>
+    <main class="mdl-layout__content mdl-color--grey-100 faculty-table">
+        <div class="example-container mat-elevation-z8 student-table">
+            <h2>Faculty Details</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let emp of employees">
+                        <td>{{emp.EMPLOYEE_ID}}</td>
+                        <td>{{emp.FULL_NAME}}</td>
+                        <td>{{emp.EMAIL}}</td>
+                        <td>{{emp.MOBILE}}</td>
+                        <td>{{emp.GENDER}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</div>

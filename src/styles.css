@@ -1,0 +1,250 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: #32325d;
+    background-image: url(assets/bg.png);
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.login-page {
+    background-image: url(assets/Anurag-logo2.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.example-container>* {
+    width: 100%;
+}
+
+.mdl-button--raised.mdl-button--colored:hover {
+    background-color: #49498e;
+}
+
+.example-form .main-title {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: 34px;
+}
+
+.example-form {
+    width: 30%;
+    height: 530px;
+    color: #fff;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.example-form h2 {
+    font-size: 24px;
+    line-height: 26px;
+    margin: 19px 9px;
+    text-align: center;
+}
+
+.example-full-width {
+    width: 100%;
+    color: #fff;
+    padding: 0px;
+}
+
+.example-form .psd {
+    margin-left: 9px;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.example-form .psd:hover {
+    text-decoration: underline;
+}
+
+.line {
+    border-bottom: 4px dotted #fff;
+    width: 160px;
+    margin: 0 auto;
+}
+
+.mat-form-field-prefix .mat-icon,
+.mat-form-field-suffix .mat-icon {
+    font-size: 116%;
+    line-height: 4.125;
+}
+
+.msg-error {
+    color: #fff;
+}
+
+.register-email-error {
+    color: #fff;
+}
+
+.mat-input-element {
+    caret-color: #fff;
+}
+
+.login-btn {
+    border: 1px solid #fff;
+    position: relative;
+    top: 21px;
+    height: 32px;
+    line-height: 31px;
+    width: 100%;
+}
+
+.sign-btn {
+    border: 1px solid #fff;
+    position: relative;
+    top: 54px;
+    height: 32px;
+    line-height: 31px;
+    width: 100%;
+}
+
+.mdl-button--raised.mdl-button--colored {
+    background: rgba(63, 81, 181, 0.03);
+    color: rgb(255, 255, 255);
+}
+
+.example-form span {
+    padding-top: 6px;
+    left: 5px;
+}
+
+.btn-account {
+    float: right;
+    position: relative;
+    top: 36px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-login {
+    float: right;
+    position: relative;
+    top: 36px;
+    left: 50px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.form2_sign_Up_Button {
+    margin-top: -222px !important;
+}
+
+.btn-account:hover {
+    text-decoration: underline;
+}
+
+.game-terms {
+    position: relative;
+    top: 290px;
+    left: 30px;
+    font-size: 15px;
+}
+
+.terms {
+    position: relative;
+    top: 276px;
+    left: 30px;
+    font-size: 15px;
+}
+
+input[type="type"],
+input[type="password"] {
+    color: #fff;
+}
+
+.mat-form-field-label {
+    color: #fff;
+}
+
+.mat-form-field-underline {
+    background-color: #fff;
+}
+
+.box {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #555;
+    box-shadow: 2px 2px 4px 2px #000;
+    margin-bottom: 20px;
+}
+
+.box img {
+    margin-left: 26px;
+    margin-top: 19px;
+}
+
+.example-section .mat-checkbox-layout {
+    cursor: inherit;
+    align-items: baseline;
+    vertical-align: middle;
+    display: inline;
+    white-space: nowrap;
+    position: relative;
+    top: 34px;
+}
+
+.example-section .mat-checkbox-frame {
+    border-color: #fff;
+}
+
+.example-section .mat-checkbox-inner-container {
+    width: 15px;
+    height: 15px;
+}
+
+.example-section .mat-checkbox-label-before .mat-checkbox-inner-container {
+    margin-left: 13px;
+}
+
+.example-content {
+    position: relative;
+    top: 50px;
+    left: 44%;
+    color: #fff;
+    text-decoration: none;
+}
+
+.example-content:hover {
+    text-decoration: underline;
+}
+
+.mat-menu-panel.mat-menu-after.mat-menu-below {
+    position: relative;
+    top: 31px;
+    min-width: 406px;
+}
+
+button.mat-menu-item {
+    text-align: center;
+}
+
+.example-form .mat-radio-outer-circle {
+    border-color: #fff;
+    width: 16px;
+    height: 16px;
+    left: 2px;
+    top: 2px;
+}
+
+.example-form .mat-radio-label-content {
+    padding-left: 4px;
+}
+
+@media screen and (max-width: 1024px) {
+    .example-form {
+        width: 90%;
+    }
+}
+
+.logout-btn {
+    color: #fff;
+}

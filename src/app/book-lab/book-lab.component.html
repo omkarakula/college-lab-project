@@ -1,0 +1,76 @@
+<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+    <app-header-component></app-header-component>
+    <div class="demo-drawer mdl-layout__drawer mdl-color--deep-purple-700 mdl-color-text--white">
+        <header class="demo-drawer-header">
+            <span class="mdl-layout-title title"><img src="assets/Anurag-logo.png" alt="logo"></span>
+        </header>
+        <app-sidebar></app-sidebar>
+    </div>
+    <!-- <main class="mdl-layout__content mdl-color--grey-100">
+        <div class="table-1" *ngFor="let x of timeTable">
+            <div class="time-table-title">
+                <h4>{{x.LAB_NAME}}</h4>
+                <h2>TIME TABLE (2017-2018)</h2>
+                <h4>(SEMESTER-II)</h4>
+            </div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>DAY</th>
+                        <th>{{x.LAB_TIME}}</th>
+                        <th>{{x.LAB_TIME}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{x.LAB_DAY}}</td>
+                        <td>{{x.SUBJECT}}</td>
+                        <td>III-A DWDM LAB</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main> -->
+    <main class="mdl-layout__content mdl-color--grey-100 faculty-table">
+        <div class="example-container mat-elevation-z8 student-table">
+            <h2>Time Table</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>DAY</th>
+                        <th>TIME</th>
+                        <th>SUBJECT</th>
+                        <th>PROFESSOR NAME</th>
+                        <th>LAB NAME</th>
+                        <th>DEPARTMENT</th>
+                        <th>LAB ROOM NO</th>
+                        <th [hidden]="userData[0].ROLE_ID==3">STATUS</th>
+                        <th [hidden]="userData[0].ROLE_ID==3">ACTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let tt of timeTable">
+                        <td>{{tt.LAB_DAY}}</td>
+                        <td>{{tt.LAB_TIME}}</td>
+                        <td>{{tt.SUBJECT}}</td>
+                        <td>{{tt.PROFESSOR_NAME}}</td>
+                        <td>{{tt.LAB_NAME}}</td>
+                        <td>{{tt.DEPARTMENT}}</td>
+                        <td>{{tt.LAB_ROOM_NO}}</td>
+                        <td class="stat-available" *ngIf="tt.STATUS_ID == 1" [hidden]="userData[0].ROLE_ID==3">Available </td>
+                        <td class="stat-booked" *ngIf="tt.STATUS_ID == 2" [hidden]="userData[0].ROLE_ID==3">Booked</td>
+                        <td class="stat-available" *ngIf="tt.STATUS_ID == 1" [hidden]="userData[0].ROLE_ID==3">
+                            <button class="mat-raised-button mdl-button mdl-js-button mdl-js-ripple-effect" (click)="statUpdate(tt.LAB_ID, 2)" color="warn" id="hdrbtn">
+                                Book
+                            </button>
+                        </td>
+                        <td class="stat-booked" *ngIf="tt.STATUS_ID == 2" [hidden]="userData[0].ROLE_ID==3">
+                            <button class="mat-raised-button mdl-button mdl-js-button mdl-js-ripple-effect" (click)="statUpdate(tt.LAB_ID, 1)" color="warn" id="hdrbtn">
+                                Cancel
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>

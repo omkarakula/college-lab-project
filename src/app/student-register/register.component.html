@@ -1,0 +1,69 @@
+<div class="login-page">
+    <div class="example-container animated slideInRight">
+        <form class="example-form" novalidate (ngSubmit)="onSubmit()">
+            <span class="mdl-layout-title main-title" routerLink="/login">College Lab</span>
+            <h2>Students Registration</h2>
+            <mat-form-field class="example-full-width">
+                <mat-icon matPrefix>person</mat-icon>
+                <input matInput placeholder="Name" type="text" id="name" pattern="[a-zA-Z][a-zA-Z ]+" [(ngModel)]="studentDetails.name" name="name" class="example-left-align" #name="ngModel" required />
+                <div [hidden]="name.valid || name.pristine">
+                    <div [hidden]="!name.hasError('required')">Name is required</div>
+                    <div [hidden]="!name.hasError('pattern')">Only alphabets are allowed</div>
+                </div>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-icon matPrefix>lock</mat-icon>
+                <input matInput id="password" name="password" placeholder="Password" type="password" class="example-left-align" [(ngModel)]="studentDetails.password" #password="ngModel" required>
+                <div [hidden]="password.valid || password.pristine">
+                    Password is required
+                </div>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-icon matPrefix>lock</mat-icon>
+                <input matInput [(ngModel)]="studentDetails.confirmPassword" id="confirmPassword" name="confirmPassword" placeholder="Confirm-Password" type="password" class="example-left-align" validateEqual="password" required #confirmPassword="ngModel">
+                <div [hidden]="confirmPassword.valid || confirmPassword.pristine">
+                    Passwords did not match
+                </div>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-icon matPrefix>poll</mat-icon>
+                <input matInput id="hall_ticket" name="hall_ticket" placeholder="Hall ticket number" type="hall_ticket" class="example-left-align" [(ngModel)]="studentDetails.hall_ticket" #hall_ticket="ngModel" required>
+                <div [hidden]="hall_ticket.valid || hall_ticket.pristine">
+                    Hall Ticket is required
+                </div>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-icon matPrefix>email</mat-icon>
+                <input matInput placeholder="Email" type="email" id="email" class="example-left-align" [(ngModel)]="studentDetails.email" name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" #email="ngModel" required>
+                <div [hidden]="email.valid || email.pristine">
+                    <div [hidden]="!email.hasError('required')">Email is required</div>
+                    <div [hidden]="!email.hasError('pattern')">Email format should be <small><b>joe@abc.com</b></small></div>
+                </div>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <span matPrefix>+91 &nbsp;</span>
+                <input matInput type="text" [(ngModel)]="studentDetails.mobile" name="mobile" placeholder="Mobile Number" id="mobile" pattern="[0-9]*" maxlength="10" minlength="10" #mobile="ngModel" required>
+                <div [hidden]="mobile.valid || mobile.pristine">
+                    <div [hidden]="!mobile.hasError('minlength')">Mobile should be 10digit</div>
+                    <div [hidden]="!mobile.hasError('required')">Mobile is required</div>
+                    <div [hidden]="!mobile.hasError('pattern')">Mobile number should be only numbers</div>
+                </div>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-icon matPrefix>home</mat-icon>
+                <input matInput id="branch" name="branch" placeholder="Branch" type="text" class="example-left-align" [(ngModel)]="studentDetails.branch" #branch="ngModel" required>
+                <div [hidden]="branch.valid || branch.pristine">
+                    Branch is required
+                </div>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-icon matPrefix>perm_contact_calendar</mat-icon>
+                <input matInput id="year" name="year" placeholder="Year" type="text" class="example-left-align" [(ngModel)]="studentDetails.year" #year="ngModel" required>
+                <div [hidden]="year.valid || year.pristine">
+                    Year is required
+                </div>
+            </mat-form-field>
+            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored login-btn">REGISTER</button>
+        </form>
+    </div>
+</div>

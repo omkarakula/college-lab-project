@@ -1,0 +1,19 @@
+<div>
+    <h1 mat-dialog-title>Lab Details</h1>
+    <div mat-dialog-content>
+        <div>
+            <p>Lab Name :- {{data.lab_status.LAB_NAME}}</p>
+            <p>Lab Department :- {{data.lab_status.DEPARTMENT}}</p>
+            <p>Room Number :- {{data.lab_status.LAB_ROOM_NO}}</p>
+            <p *ngIf="data.lab_status.PROFESSOR_NAME">Professor Name :- {{data.lab_status.PROFESSOR_NAME}}</p>
+            <p *ngIf="!data.lab_status.PROFESSOR_NAME">Not Booked</p>
+        </div>
+        <!-- <div *ngIf="data.lab_status.STATUS_ID==2">
+            This is Lab is already Booked
+        </div> -->
+        <!-- <p>{{data.lab_status.pname}}</p> -->
+    </div>
+    <div mat-dialog-actions class="modal-btn">
+        <button mat-raised-button color="warn" (click)="onNoClick()" cdkFocusInitial>Close</button>
+    </div>
+</div>

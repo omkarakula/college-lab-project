@@ -1,0 +1,43 @@
+<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+    <app-header-component></app-header-component>
+    <div class="demo-drawer mdl-layout__drawer mdl-color--deep-purple-700 mdl-color-text--white">
+        <header class="demo-drawer-header">
+            <span class="mdl-layout-title title"><img src="assets/Anurag-logo.png" alt="logo"></span>
+        </header>
+        <app-sidebar></app-sidebar>
+    </div>
+    <main class="mdl-layout__content mdl-color--grey-100">
+        <div class="example-container mat-elevation-z8 student-table">
+            <h2>Student Details</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Roll No</th>
+                        <th>Branch</th>
+                        <th>Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let student of students">
+                        <td>{{student.FULL_NAME}}</td>
+                        <td>{{student.EMAIL}}</td>
+                        <td>{{student.MOBILE}}</td>
+                        <td>{{student.HALL_TICKET}}</td>
+                        <td>{{student.BRANCH}}</td>
+                        <td>{{student.PRESENTYEAR}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </main>
+</div>
+<!-- <td>Sravan</td>
+                        <td>sslabs@gmail.com</td>
+                        <td>888888888</td>
+                        <td>21345435</td>
+                        <td>B.Tech</td>
+                        <td>2018</td> -->

@@ -1,0 +1,11 @@
+<nav class="demo-navigation mdl-navigation mdl-color--deep-purple-400">
+    <h4>Dept.of.Computer <br> Science & Engineering</h4>
+    <a class="mdl-navigation__link" *ngIf="userData[0].ROLE_ID==1 || userData[0].ROLE_ID==2" routerLink="/dashboard"><i class="material-icons" role="presentation">dashboard</i>Dashboard</a>
+    <a class="mdl-navigation__link" routerLink="/time-table"><i class="material-icons" role="presentation">access_time</i>Time Table</a>
+    <a class="mdl-navigation__link" *ngIf="userData[0].ROLE_ID==1" routerLink="/student-details"><i class="material-icons" role="presentation">person</i>Student</a>
+    <a class="mdl-navigation__link" *ngIf="userData[0].ROLE_ID==1" routerLink="/faculty-details"><i class="material-icons" role="presentation">report</i>Faculty</a>
+    <a class="mdl-navigation__link" *ngIf="userData[0].ROLE_ID==1 || userData[0].ROLE_ID==2" routerLink="/book-lab"><i class="material-icons" role="presentation">access_time</i>Book Lab</a>
+    <!-- <a class="mdl-navigation__link" href=""><i class="material-icons" role="presentation">av_timer</i>Set Times</a> -->
+    <div class="mdl-layout-spacer"></div>
+</nav>
+<!-- *ngIf="userData.ROLE_ID==1ROLE_ID=="   *ngIf="userData[0]==1"-->
